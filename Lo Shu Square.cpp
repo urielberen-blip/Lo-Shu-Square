@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void LoShuMagicSquare(int arr[3][3]);
+bool LoShuMagicSquare(int arr[3][3]);
 
 int main() {
 
@@ -37,7 +37,7 @@ LoShuMagicSquare (arr4);
     return 0;
 }
 
-void LoShuMagicSquare (int arr[][3]){
+bool LoShuMagicSquare (int arr[][3]){
     int row1 = 0, row2 = 0, row3 = 0;
     int col1 = 0, col2 = 0, col3 = 0;
     int diag1 = 0, diag2 = 0;
@@ -77,9 +77,11 @@ void LoShuMagicSquare (int arr[][3]){
       }
      if (row1==row2 && row3==col1 && col2==col3 && diag1==diag2){
          cout << "This is a Lo Shu Magic Square" << endl;
+         return true;
      }
      else {
          cout <<"This is not a Lo Shu Magic Square" << endl;
+         return false;
      }
       
     }
